@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 // 削除処理
 if (isset($_GET['delete_id'])) {
-    $conn = new mysqli("localhost", "webuser", "password123", "mysite");
+    $conn = new mysqli("db", "webuser", "password123", "mysite");
     
     if ($conn->connect_error) {
         die("接続失敗: " . $conn->connect_error);
@@ -39,7 +39,7 @@ if (isset($_GET['delete_id'])) {
     
     <?php
     // データベース接続
-    $conn = new mysqli("localhost", "webuser", "password123", "mysite");
+    $conn = new mysqli("db", "webuser", "password123", "mysite");
     
     // 接続確認
     if ($conn->connect_error) {

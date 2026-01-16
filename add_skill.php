@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 // フォームが送信された時の処理
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $conn = new mysqli("localhost", "webuser", "password123", "mysite");
+    $conn = new mysqli("db", "webuser", "password123", "mysite");
     
     if ($conn->connect_error) {
         die("接続失敗: " . $conn->connect_error);

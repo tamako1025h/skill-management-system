@@ -1,0 +1,37 @@
+services:
+  web:
+    build: .
+    container_name: skill-web
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - skill-network
+
+  db:
+    image: mysql:8.0
+    container_name: skill-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mysite
+      MYSQL_USER: webuser
+      MYSQL_PASSWORD: password123
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - skill-network
+
+volumes:
+  db-data:
+
+networks:
+  skill-network:
+```
+
+---
+
+**3. `.dockerignore`**
+```
+.git
+README.md

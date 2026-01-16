@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$conn = new mysqli("localhost", "webuser", "password123", "mysite");
+$conn = new mysqli("db", "webuser", "password123", "mysite");
 
 if ($conn->connect_error) {
     die("接続失敗: " . $conn->connect_error);
