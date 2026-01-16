@@ -29,9 +29,8 @@ networks:
   skill-network:
 ```
 
----
-
-**3. `.dockerignore`**
+**`.dockerignore`が正しく別ファイルになっているか確認：**
+`.dockerignore`というファイルが存在して、中身が：
 ```
 .git
 README.md
